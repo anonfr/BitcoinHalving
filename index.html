@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Halving Countdown</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <h1>Bitcoin Halving Countdown</h1>
+        <div id="countdown" class="countdown">
+            <div class="time">
+                <span id="days">1309</span>
+                <small>Days</small>
+            </div>
+            <div class="time">
+                <span id="hours">16</span>
+                <small>Hours</small>
+            </div>
+            <div class="time">
+                <span id="minutes">36</span>
+                <small>Minutes</small>
+            </div>
+            <div class="time">
+                <span id="seconds">09</span>
+                <small>Seconds</small>
+            </div>
+        </div>
+        <div class="info">
+            <p>Next halving estimated: <span id="halvingDate">17 April 2028 01:59</span></p>
+            <p>Current block reward: <span id="currentReward">3.125 BTC</span></p>
+            <p>Next block reward: <span id="nextReward">1.5625 BTC</span></p>
+        </div>
+        <div class="block-info">
+            <div>
+                <span id="currentBlock">861,402</span>
+                <small>Current Block</small>
+            </div>
+            <div>
+                <span id="halvingBlock">1,050,000</span>
+                <small>Bitcoin Halving at Block</small>
+            </div>
+            <div>
+                <span id="blocksToGo">188,598</span>
+                <small>Blocks To Go</small>
+            </div>
+        </div>
+        <div class="data-attribution">
+            Bitcoin data powered by <a href="https://blockchair.com/" target="_blank" rel="noopener noreferrer">blockchair</a>
+        </div>
+        <div class="developer-attribution">
+            Developed by <a href="https://x.com/AnonfrXBT" target="_blank" rel="noopener noreferrer">AnonfrXBT</a>
+        </div>
+        <div class="explanation-container">
+            <div class="explanation-header">
+                <h2>What is Bitcoin Halving?</h2>
+                <button class="expand-btn" id="expandBtn">+</button>
+            </div>
+            <div class="explanation-content" id="explanationContent">
+                <p>Bitcoin has a total supply of 21 million. The underlying code ensures that only 21 million bitcoins will ever exist. Bitcoin's finite supply is a strong economic statement and supports its value system.</p>
+                
+                <p>Bitcoin is distributed through mining. The 21 million bitcoins in existence are scheduled to be mined through the year 2140. That is, the last bitcoin is expected to be mined in the year 2140. At the current rate of emission, the unmined bitcoin will be exhausted before this speculated time. Almost 90% of bitcoin's total supply has been mined. About 900 bitcoins are mined per day, currently.</p>
+                
+                <p>To sustain the emission and increase scarcity, the number of bitcoin emitted per block is regularly reduced. This process of reducing the bitcoin emission per block is known as Bitcoin Halving.</p>
+                
+                <p>After a predetermined block height (a number that is used to indicate a particular block), the amount of bitcoin emitted per block is reduced to half of the previous number. For bitcoin, new halving occurs after an interval of 210,000 blocks or 4 years.</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/countdown.js"></script>
+</body>
+</html>
