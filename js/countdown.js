@@ -82,3 +82,41 @@ document.addEventListener('DOMContentLoaded', function() {
         expandBtn.addEventListener('click', toggleExplanation);
     }
 });
+
+let lastUpdateTime = 0;
+let updateInterval;
+
+function updateBitcoinPrice() {
+    fetch('https://blockchain.info/ticker')
+        .then(response => response.json())
+        .then(data => {
+            const price = data.USD.last;
+            document.getElementById('btcPrice').textContent = `$${price.toLocaleString()}`;
+            updateLastUpdatedTime();
+        })
+        .catch(error => {
+            console.error('Error fetching Bitcoin price:', error);
+            document.getElementById('btcPrice').textContent = 'Unable to load price';
+        });
+}
+
+function updateLastUpdatedTime() {
+    const now = new Date();
+    document.getElementById('lastUpdated').textContent = `Last updated: ${now.toLocaleTimeString()}`;
+}
+
+// Update price every 5 seconds
+setInterval(updateBitcoinPrice, 5000);
+
+// Update price immediately when the page loads
+document.addEventListener('DOMContentLoaded', updateBitcoinPrice);
+
+// Update price when the page is refreshed or becomes visible again
+document.addEventListener('visibilitychange', function() {
+    if (!document.hidden) {
+        updateBitcoinPrice();
+    }
+});
+
+// Start updates when the page loads
+document.addEventListener('DOMContentLoaded', startUpdates);

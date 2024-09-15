@@ -11,6 +11,7 @@
     <div class="container">
         <div class="heading-container">
             <h1>Bitcoin Halving Countdown</h1>
+            <p class="developer-attribution">Developed by <a href="https://x.com/AnonfrXBT" target="_blank" rel="noopener noreferrer">@AnonfrXBT</a></p>
         </div>
         <div id="countdown" class="countdown">
             <div class="time">
@@ -35,6 +36,12 @@
             <p>Current block reward: <span id="currentReward">3.125 BTC</span></p>
             <p>Next block reward: <span id="nextReward">1.5625 BTC</span></p>
         </div>
+        <div class="btc-price-container">
+            <div class="btc-price">
+                <span>BTC Price: </span><span id="btcPrice">Loading...</span>
+            </div>
+            <div id="lastUpdated"></div>
+        </div>
         <div class="block-info">
             <div>
                 <span id="currentBlock">861,402</span>
@@ -51,9 +58,6 @@
         </div>
         <div class="data-attribution">
             Bitcoin data powered by <a href="https://blockchair.com/" target="_blank" rel="noopener noreferrer">Blockchair</a>
-        </div>
-        <div class="developer-attribution">
-            Developed by <a href="https://x.com/AnonfrXBT" target="_blank" rel="noopener noreferrer">@AnonfrXBT</a>
         </div>
         <div class="explanation-container">
             <div class="explanation-header">
