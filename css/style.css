@@ -120,7 +120,7 @@ h1 {
 }
 
 .explanation-content.expanded {
-    max-height: 1000px;
+    max-height: 1000px; /* Adjust this value based on your content */
     transition: max-height 0.5s ease-in;
 }
 

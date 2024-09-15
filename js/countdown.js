@@ -1,4 +1,3 @@
-
 const halvingDate = new Date('2028-04-17T01:59:00Z');
 
 function updateCountdown() {
@@ -56,11 +55,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+    const explanationHeader = document.querySelector('.explanation-header');
     const expandBtn = document.getElementById('expandBtn');
     const explanationContent = document.getElementById('explanationContent');
 
-    if (expandBtn && explanationContent) {
-        expandBtn.addEventListener('click', function() {
+    if (explanationHeader && expandBtn && explanationContent) {
+        function toggleExplanation() {
             explanationContent.classList.toggle('expanded');
             
             if (explanationContent.classList.contains('expanded')) {
@@ -68,6 +68,17 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 expandBtn.textContent = '+';
             }
+        }
+
+        // Make the entire header clickable
+        explanationHeader.addEventListener('click', function(event) {
+            // Prevent the click from triggering twice when clicking the button
+            if (event.target !== expandBtn) {
+                toggleExplanation();
+            }
         });
+
+        // Keep the button clickable separately
+        expandBtn.addEventListener('click', toggleExplanation);
     }
 });
