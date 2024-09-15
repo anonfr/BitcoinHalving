@@ -71,18 +71,18 @@ h1 {
 
 .data-attribution, .developer-attribution {
     margin: 0.5rem 0;
-    font-size: 1rem; /* Increased from 0.9rem */
+    font-size: 1rem;
     color: #00ff00;
-    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .data-attribution a, .developer-attribution a {
-    color: #ff0000; /* Keeping the links red */
-    text-decoration: none; /* Removes underline */
+    color: #ff0000; 
+    text-decoration: none; 
 }
 
 .developer-attribution {
-    font-size: 1.1rem; /* Slightly larger than data attribution */
+    font-size: 1.1rem;
 }
 
 .explanation-container {
@@ -91,8 +91,8 @@ h1 {
 
 .explanation-header {
     cursor: pointer;
-    padding: 0.8rem 1.2rem; /* Increased padding to make the box larger */
-    background-color: rgba(255, 215, 0, 0.15); /* More transparent gold background */
+    padding: 0.8rem 1.2rem; 
+    background-color: rgba(255, 215, 0, 0.15); 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -100,16 +100,16 @@ h1 {
 }
 
 .explanation-header h2 {
-    font-size: 1.5rem; /* Increased font size */
+    font-size: 1.5rem; 
     margin: 0;
-    color: #ffd700; /* Gold color for text */
+    color: #ffd700; 
 }
 
 .expand-btn {
     background: none;
     border: none;
-    color: #ffd700; /* Gold color for '+' sign */
-    font-size: 1.5rem; /* Increased font size */
+    color: #ffd700; 
+    font-size: 1.5rem; 
     cursor: pointer;
 }
 
@@ -120,7 +120,7 @@ h1 {
 }
 
 .explanation-content.expanded {
-    max-height: 1000px; /* Adjust this value based on your content */
+    max-height: 1000px; 
     transition: max-height 0.5s ease-in;
 }
 
